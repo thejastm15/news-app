@@ -2,6 +2,7 @@ import './App.css';
 import React, { Component } from 'react'
 import Navbar from './components/Navbar';
 import News from './components/News';
+import LoadingBar from 'react-top-loading-bar'
 import {
   BrowserRouter,
   Routes,
@@ -17,6 +18,10 @@ export default class App extends Component {
       <div>
       <BrowserRouter>
         <Navbar/>
+        <LoadingBar
+        color='#f11946'
+        progress={10}
+      />
         <Routes>
           <Route exact path="/" element={<News key="general" pagesize = {this.pagesize} country='in' category="general"/>} />
           <Route exact path="/health" element={<News key="health" pagesize = {this.pagesize} country="in" category="health"/>} />

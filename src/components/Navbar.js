@@ -5,7 +5,7 @@ export class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <nav className="navbar bg-dark navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">News Bites</Link>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">

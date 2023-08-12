@@ -67,6 +67,7 @@ export class News extends Component {
     const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=9857ed05f67d4e04a81beefeda614a13&page=${this.state.page}&pageSize=${this.props.pagesize}`
     let data = await fetch(url)
     let parseData = await data.json()
+    console.log(parseData)
     this.setState({
       articles: this.state.articles.concat(parseData.articles),
       totalResults: parseData.totalResults,
@@ -77,7 +78,7 @@ export class News extends Component {
   render() {
     return (
       <>
-        <h1 className='text-center my-3'>NewsBites - top news from {this.capitalizeFirstLetter(this.props.category)}</h1>
+        <h1 className='text-center top-heading'>NewsBites - top news from {this.capitalizeFirstLetter(this.props.category)}</h1>
         {this.state.loading && <Spinner />}
         <InfiniteScroll
           dataLength={this.state.articles.length}
