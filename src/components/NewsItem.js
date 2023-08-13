@@ -6,6 +6,11 @@ export class NewsItem extends Component {
     return (
       <div>
         <div className="card mb-3 my-3">
+          <div className="round-pill">
+            <span className="badge rounded-pill bg-success source">
+              {source}
+            </span>
+          </div>
           <div className="row g-0">
             <div className="col-md-4">
               <img src={!imgUrl ? "https://khabaronline24.in/public/user/images/3d-world-news.jpg" : imgUrl} className="img-fluid rounded-start"
@@ -13,10 +18,8 @@ export class NewsItem extends Component {
             </div>
             <div className="col-md-8">
               <div className="card-body">
+
                 <h5 className="card-title">{title}
-                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success source">
-                    {source}
-                  </span>
                 </h5><p className="card-text">{description}</p>
                 <div className="btn-date">
                   <a href={newsUrl} target="blank" className="btn btn-outline-dark">
