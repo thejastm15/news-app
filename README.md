@@ -4,10 +4,10 @@
 
 ## How to set apiKey
 
-* Create a file .env.local.
+* Create a file ```.env.local```
 
 * Inside that file paste this ```REACT_APP_NEWS_API='(your apiKey)'```.
 
-* Put your apiKey you created and paste it in (your apiKey) section.
+* Put your apiKey you created and paste it in ```(your apiKey)``` section.
 
 (note: newsapi gives 1000 requests/day in free version and CORS enabled for localhost only.) 
