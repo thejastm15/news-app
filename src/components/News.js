@@ -31,7 +31,8 @@ export default function News(props) {
   useEffect(() => {
     document.title = `${capitalizeFirstLetter(props.category)} - NewsBites`
     updateNews();
-  })
+    //eslint-disable-next-line
+  },[])
 
   const fetchMoreData = async () => {
     const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page+1}&pageSize=${props.pagesize}`
